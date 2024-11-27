@@ -1,26 +1,47 @@
 # CodingExample
 
-## Your task
+## Deine Aufgaben
 
-1. Check if junior developer implemented a good current time display in app component. Is everything okay? What would you do differently?
-2. Add a new page to the application. Add a route guard. Fake an api call and response (only when logged in is allowed to view the page). The page contains a form to add a credit card. Imagine the user was redirected to this page after he chosen Credit Card as payment type. The form should contain the following fields:
-   - Cardholder name
-   - Card number
-   - CVV
-   - Submit button
-3. Based on the card number display the card type (Visa, MasterCard, Other) in the form.
-4. Validate the form fields:
-   - Cardholder name: Required
-   - Card number: Required, 16 digits
-   - CVV: Required, 3 digits
-5. Submit the form to an fake api endpoint (POST https://dummyjson.com/http/200) and add the values from the form as payload. Display the response in the console and redirect to homepage.
+Stelle dir vor, du startest ein Projekt auf grüner Wiese. Ziel ist es eine Shop-Anwendung zu entwickeln, die es ermöglicht, Produkte zu kaufen. Es wird eine Produktübersicht geben, eine Produktseite, ein Warenkorb und eine Checkout-Seite.
+Die Anwendung soll responsive sein und auf Desktop und mobilen Geräten funktionieren. Wichtig ist, dass diese barrierefrei ist.
 
-Consider the following:
+### 1. Projektstart
 
-- The user can use desktop or a mobile device.
-- The user can have a handicap.
-- The user can have a slow internet connection.
-- Think about a good folder structure (if the application grows, everything should be easy to find).
+Wie würdest du ein solches Projekt aufbauen? Würdest du eine bestimmte Ordnerstruktur verwenden? Welche Frameworks, Libraries oder Tools würdest du verwenden?
+
+Hinweis: Wir beachten hier nicht das Backend und starten keine Monorepo-Diskussion. Betrachte das Projekt als eigenständiges Frontend-Projekt.
+
+### 2. Bestehende Implementierung
+
+Ein Junior-Entwickler hat eine Uhrzeit Komponente erstellt, welche die aktuelle Uhrzeit anzeigt. Aufgabe war es diese im Format "xx Uhr - xx Minuten - xx Sekunden" anzuzeigen und sich sekündlich zu aktualisieren.
+
+Überprüfe die Implementierung und gib Feedback. Deine Aufgabe ist es den Junior zu unterstützen und seine Programmierfähigkeiten zu fördern. Was ist dir allgemein wichtig? Beachte auch die Projektanforderungen
+
+### 3. Neuimplementierung
+
+Für das Refinement wurde folgende Story mitgebracht:
+
+--------
+
+Als Kunde möchte ich meine Kreditkarte hinzufügen, um damit zu bezahlen.
+
+Die Karte muss vorher hinzugefügt werden und kann anschließend für die Zahlung verwendet werden.
+
+AK:
+- Auf der Checkout-Seite soll es die Möglichkeit geben mit Kreditkarte zu bezahlen
+- Die Kreditkarte soll mit folgenden Feldern hinzugefügt werden können:
+  - Kartennummer (Pflichtfeld, 16 Zeichen)
+  - CVV (Pflichtfeld, 3 Zeichen)
+- Der Karten-Typ (Visa, MasterCard, Sonstige) soll basierend auf der Eingabe der Kartennummer angezeigt werden
+- Die Eingabe soll im Backend gespeichert werden
+
+---------
+
+Sind alle Informationen vorhanden? 
+
+Zeit verstreicht und es kommt zum Planning / Planning 2. Lass uns das Planning 2 durchspielen. Anschließend sollst du die Story umsetzen.
+
+Info: Als Dummy-Endpunkt für die Speicherung im Backend kannst du folgenden Endpunkt verwenden: https://dummyjson.com/http/200
 
 ## Development server
 

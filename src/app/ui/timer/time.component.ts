@@ -6,10 +6,10 @@ import { CustomDatePipe } from "./custom-date.pipe";
   imports: [
     CustomDatePipe
   ],
-  templateUrl: './timer.component.html',
-  styleUrl: './timer.component.scss'
+  templateUrl: './time.component.html',
+  styleUrl: './time.component.scss'
 })
-export class TimerComponent {
+export class TimeComponent {
   get time() {
     return new Date();
   }

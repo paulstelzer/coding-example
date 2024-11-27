@@ -6,6 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CustomDatePipe {
   transform(value: Date): string {
-    return value.toISOString();
+    return `${value.getHours()} Uhr - ${value.getMinutes()} Minuten - ${value.getSeconds()} Sekunden `
   }
 }
